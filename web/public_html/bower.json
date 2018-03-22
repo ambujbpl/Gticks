@@ -1,0 +1,25 @@
+{
+  "name": "ambuj",
+  "authors": [
+    "ambujbpl <34868256+shribliss@users.noreply.github.com>"
+  ],
+  "description": "test",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "moment": "^2.20.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "jquery": "^3.3.1",
+    "typed.js": "^2.0.6",
+	"aos": "*"
+  }
+}

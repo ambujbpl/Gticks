@@ -1,0 +1,260 @@
+<script type="text/javascript" src="./../js/addExam.js"></script>
+<style>
+  /* Full-width input fields */
+
+  .form-controlMy {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  /* Add a background color when the inputs get focus */
+
+  .form-controlMy:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Set a style for all buttons */
+
+  .buttonInvigi {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .buttonInvigi:hover {
+    opacity: 1;
+  }
+
+  /* Extra styles for the cancel button */
+
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336 !important;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+
+  .cancelbtn,
+  .signupbtn {
+    float: left;
+    width: 50% !important;
+  }
+
+  /* Add padding to container elements */
+
+  .containerNew {
+    padding: 16px;
+  }
+
+  /* The Modal (background) */
+
+  .myModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+
+  /* Modal Content/Box */
+
+  .myModal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+  }
+
+  /* Style the horizontal ruler */
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* The Close Button (x) */
+
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+
+  /* Clear floats */
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+
+  @media screen and (max-width: 300px) {
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+</style>
+<h5>Click below Button</h5>
+
+<button class="buttonInvigi" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i class="fa fa-user-plus"></i> Add Exam Schedule</button>
+
+<div id="id02" class="modal myModal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content myModal-content" id="examForm" method="post" action="">
+    <div class="containerNew">
+      <p>Please fill this form to Add Exam Schedule.</p>
+      <hr>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Name of Exam</b></label>
+        <input type="text" class="form-control form-controlMy capitalize" id="examName" placeholder="Exam Name" name="examName">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Description</b></label>
+        <input type="text" class="form-control form-controlMy capitalize" id="description" placeholder="Exam Description" name="description">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Orgniser</b></label>
+        <input type="text" class="form-control form-controlMy" id="orgniser" placeholder="Exam Orgniser" name="orgniser">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Exam Date</b></label>
+        <!-- <input class="form-control form-controlMy" id="examDate" name="examDate" placeholder="DD-MM-YYYY" /> -->
+        <input class="form-control form-controlMy" id="examDate" name="examDate" placeholder="DD-MM-YYYY" />
+        <!-- <div id="mdp-demo"></div> -->
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Shift</b></label>
+        <input type="text" class="form-control form-controlMy" id="examShift" placeholder="Exam Shift" name="examShift">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Count</b></label>
+        <input type="text" class="form-control form-controlMy" id="examCount" placeholder="Exam Count" name="examCount">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Requirement</b></label>
+        <input type="text" class="form-control form-controlMy" id="examRequirement" placeholder="Exam Requirement" name="examRequirement">
+      </div>
+
+      <div class="clearfix">
+        <button class="cancelbtn buttonInvigi" type="button" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+        <button class="signupbtn buttonInvigi" type="submit" name="signup" value="Sign up">Add Exam</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id02');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  function myFunction() {
+    var examName = $('#examName').val();
+    var examShift = $('#examShift').val();
+    var examCount = $('#examCount').val();
+    var orgniser = $('#orgniser').val();
+    var description = $('#description').val();
+    var examDate = $('#examDate').val();
+    var examRequirement = $('#examRequirement').val();
+    // $('.registrationDiv').html("<span class='registrationSpan'>Please check for final submission.</span> <input id='checkBoxFinal' type='checkbox'>");
+    // $('.registrationDiv').removeClass('hide');
+    // $('.firstSubmitButtoninvigilator').addClass('hide');
+    // $('.finalSubmitButtoninvigilator').removeClass('hide');
+    newExam = {
+      "examTital": capitalizeFirstLetterEachWordSplitBySpace(examName),
+      "shift": examShift,
+      "count": examCount,
+      "orgniser": orgniser,
+      "examDate": examDate,
+      "description": capitalizeFirstLetterEachWordSplitBySpace(description),
+      "requirement": examRequirement
+    };
+    // sessionsetItem("newinvigilator", newinvigilator);
+    //   var newinvigilator = sessiongetItem("newinvigilator");
+    console.log(newExam);
+    var secret = sessiongetItem("secret");
+    console.log(secret);
+    if ((secret == null) || (secret == "") || (secret == undefined)) {} else {
+      if (secret.Key == "Edit") {
+        newExam.Key = "Edit";
+      }
+    }
+    console.log("newExam>>>>>>>>>>>",newExam);
+    $.when(Posthandler("/route/newExam", newExam, true)).done(function(res) {
+      if (res.resCode == 'OK') {
+        console.log(res);
+        // sessionremoveItem("login");
+        // var x = sessionremoveItem("secret");
+        // sessionremoveItem("newinvigilator");
+        // console.log(x);
+        swal({
+            title: res.resCode,
+            text: res.msg,
+            type: "success"
+          },
+          function() {
+            swal.close();
+            window.location.replace("./dashboard.html");
+          });
+      } else {
+        swal({
+            title: res.resCode,
+            text: res.msg,
+            type: "error"
+          },
+          function() {
+            swal.close();
+            window.location.replace("./dashboard.html");
+          });
+      }
+    });
+  }
+</script>

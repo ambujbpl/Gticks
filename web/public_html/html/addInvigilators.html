@@ -1,0 +1,258 @@
+<script type="text/javascript" src="./../js/addInvigilators.js"></script>
+<style>
+  /* Full-width input fields */
+
+  .form-controlMy {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  /* Add a background color when the inputs get focus */
+
+  .form-controlMy:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Set a style for all buttons */
+
+  .buttonInvigi {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .buttonInvigi:hover {
+    opacity: 1;
+  }
+
+  /* Extra styles for the cancel button */
+
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336 !important;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+
+  .cancelbtn,
+  .signupbtn {
+    float: left;
+    width: 50% !important;
+  }
+
+  /* Add padding to container elements */
+
+  .containerNew {
+    padding: 16px;
+  }
+
+  /* The Modal (background) */
+
+  .myModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+
+  /* Modal Content/Box */
+
+  .myModal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+  }
+
+  /* Style the horizontal ruler */
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* The Close Button (x) */
+
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+
+  /* Clear floats */
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+
+  @media screen and (max-width: 300px) {
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+</style>
+<h5>Click below Button</h5>
+
+<button class="buttonInvigi" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-user-plus"></i> Add Invigilators</button>
+
+<div id="id01" class="modal myModal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content myModal-content" id="invigilatorForm" method="post" action="">
+    <div class="containerNew">
+      <p>Please fill this form to create an Invigilator Profile.</p>
+      <hr>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Name</b></label>
+        <input type="text" class="form-control form-controlMy capitalize" id="invigilatorName" placeholder="Name" name="invigilatorName">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Father Name</b></label>
+        <input type="text" class="form-control form-controlMy capitalize" id="fatherName" placeholder="Father Name" name="fatherName">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Address</b></label>
+        <input type="text" class="form-control form-controlMy" id="invigilatorAddress" placeholder="Address" name="invigilatorAddress">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>DOB</b></label>
+        <input class="form-control form-controlMy" id="date" name="date" placeholder="YYYY-MM-DD" type="text" />
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Email</b></label>
+        <input type="text" class="form-control form-controlMy" id="invigilatorEmail" placeholder="Email" name="invigilatorEmail">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Mobile</b></label>
+        <input type="text" class="form-control form-controlMy" id="invigilatorMobile" placeholder="Your Name" name="invigilatorMobile">
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
+        <label><b>Experience in Year</b></label>
+        <input type="text" class="form-control form-controlMy" id="invigilatorExperience" placeholder="Experience" name="invigilatorExperience">
+      </div>
+
+      <div class="clearfix">
+        <button class="cancelbtn buttonInvigi" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+        <button class="signupbtn buttonInvigi" type="submit" name="signup" value="Sign up">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  function myFunction() {
+    var invigilatorName = $('#invigilatorName').val();
+    var invigilatorEmail = $('#invigilatorEmail').val();
+    var invigilatorMobile = $('#invigilatorMobile').val();
+    var invigilatorAddress = $('#invigilatorAddress').val();
+    var fatherName = $('#fatherName').val();
+    var date = $('#date').val();
+    var invigilatorExperience = $('#invigilatorExperience').val();
+    // $('.registrationDiv').html("<span class='registrationSpan'>Please check for final submission.</span> <input id='checkBoxFinal' type='checkbox'>");
+    // $('.registrationDiv').removeClass('hide');
+    // $('.firstSubmitButtoninvigilator').addClass('hide');
+    // $('.finalSubmitButtoninvigilator').removeClass('hide');
+    newinvigilator = {
+      "Name": capitalizeFirstLetterEachWordSplitBySpace(invigilatorName),
+      "Email": invigilatorEmail,
+      "Mobile": invigilatorMobile,
+      "Address": invigilatorAddress,
+      "Date": date,
+      "Father": capitalizeFirstLetterEachWordSplitBySpace(fatherName),
+      "Experience": invigilatorExperience
+    };
+    // sessionsetItem("newinvigilator", newinvigilator);
+    //   var newinvigilator = sessiongetItem("newinvigilator");
+    console.log(newinvigilator);
+    var secret = sessiongetItem("secret");
+    console.log(secret);
+    if ((secret == null) || (secret == "") || (secret == undefined)) {} else {
+      if (secret.Key == "Edit") {
+        newinvigilator.Key = "Edit";
+      }
+    }
+    console.log(newinvigilator);
+    $.when(Posthandler("/route/newinvigilator", newinvigilator, true)).done(function(res) {
+      if (res.resCode == 'OK') {
+        console.log(res);
+        // sessionremoveItem("login");
+        // var x = sessionremoveItem("secret");
+        // sessionremoveItem("newinvigilator");
+        // console.log(x);
+        swal({
+            title: res.resCode,
+            text: res.msg,
+            type: "success"
+          },
+          function() {
+            swal.close();
+            window.location.replace("./dashboard.html");
+          });
+      } else {
+        swal({
+            title: res.resCode,
+            text: res.msg,
+            type: "error"
+          },
+          function() {
+            swal.close();
+            window.location.replace("./dashboard.html");
+          });
+      }
+    });
+  }
+</script>

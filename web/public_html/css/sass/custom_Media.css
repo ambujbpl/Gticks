@@ -1,0 +1,15 @@
+/*==================================================
+=            Bootstrap 4 Media Queries             =
+==================================================*/
+
+/*----------- common device -----------*/
+
+@media (max-width: 768px) {
+  .sweet-alert h2 {
+      font-size: 13px;
+      margin: 5px;
+}
+.sa-button-container button{
+  margin: 5px;
+}
+}

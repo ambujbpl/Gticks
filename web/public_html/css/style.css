@@ -1,0 +1,822 @@
+body {
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+    }
+.myNavbar {
+  /*position: relative;*/
+  position: fixed;
+  min-height: 50px;
+  /*margin-bottom: 20px !important;*/
+}
+
+.myNavBgColor{
+  background-color: #025aa5;
+}
+
+.myNavbar a img, .myNavbar1 a img {
+  height: 30px;
+  width: 30px;
+}
+
+.modal-header img {
+  width: 30px;
+  height: 30px;
+}
+
+.social {
+  color: #fff !important;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.social li:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.social li {
+  border-right: 1px solid #ddd;
+  display: table-cell;
+  vertical-align: middle;
+  height: 40px;
+  margin-right: 5px;
+  width: 40px;
+  text-align: center;
+  -webkit-transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -o-transition: background .5s ease-in-out;
+  -ms-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+  padding: 1px;
+}
+
+.social li a i {
+  color: #ccc;
+}
+
+.social li:hover a i {
+  color: #fff;
+}
+
+.marginTop60{
+  margin-top: 60px;
+}
+
+.marginTop55{
+  margin-top: 56px;
+}
+
+.myContainerCss {
+  margin-top: 70px !important;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.pull-right {
+  float: right!important;
+}
+
+.greenTicks-Padding5 {
+  padding: 5px;
+}
+
+.paddingAnchPara {
+  padding: 15px 5px;
+}
+
+.padding5 {
+  padding: 5px 0px !important;
+}
+
+.greenTicks-Padding10 {
+  padding: 10px;
+}
+
+.greenTicks-Padding10All {
+  padding: 10px;
+}
+
+.greenTicks-DivBod {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.greenTicks-title {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: cursive;
+  /*border-bottom: 1px solid #202020;*/
+  /*font-weight: bold;*/
+  /*font-style: italic;*/
+}
+
+.contactUsPara{
+  color: #202020;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+
+.margin-top {
+  margin: 20px 0px;
+}
+
+.DivCen {
+  text-align: center;
+}
+
+.greenTicks-stitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.greenTicks-fdoc {
+  color: #000 !important;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.total-css {
+  text-align: center;
+  font-size: 30px;
+}
+
+.border {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.borderImage {
+  border: 1px solid #A2A2A2;
+  border-radius: 5px !important;
+}
+
+.form-groupcssContact {
+  padding: 3px;
+}
+
+.greenTicks-Footer {
+  text-align: center;
+  width: 100%;
+  min-height: 20px;
+  background-color: #025aa5;
+  color: #fff;
+  line-height: 20px;
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+}
+
+/*form css*/
+
+.form-groupcss {
+  padding: 0px 0px;
+  posgreenTickson: relative;
+}
+
+.error {
+  color: red;
+}
+
+.pullRightCustom {
+  float: right !important;
+}
+
+.img,
+.img1,
+.img2 {
+  height: 15px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.img:hover, .img1:hover {
+  cursor: pointer;
+}
+
+.submitbuttonCss {
+  padding-right: 0px;
+  padding-left: 10px;
+}
+
+/*Class*/
+
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
+.displayNone {
+  display: none;
+}
+
+.opacityP1 {
+  opacity: 0.1;
+}
+
+.opacity1 {
+  opacity: 1;
+}
+
+.carousel-indicators li {
+  background-color: #ff9999;
+}
+
+.carousel-indicators li:active {
+  background-color: #ff0000 !important;
+}
+/*for SignUp form css */
+
+/*sign up for container*/
+
+.containerload {
+  min-height: 438px;
+}
+
+.login-page {
+  background-color: #f1f1f1 !important;
+}
+
+.containerCss {
+  background-color: #fff !important;
+  margin-bottom: 5px;
+}
+
+.border {
+  border: 1px solid #A2A2A2 !important;
+}
+
+.backgroundColor {
+  background-color: #f1f1f1 !important;
+}
+
+.headerDiv1 {
+  text-align: center;
+  font-size: 24;
+  margin: 10px 0px;
+}
+
+.headerDiv2 {
+  /*text-align: center;*/
+  font-size: 15;
+  background-color: #CAC8C8;
+  padding: 0px 10px;
+}
+
+.headerDiv3 {
+  /*text-align: center;*/
+  font-size: 10;
+  background-color: blue;
+  padding: 2px 10px;
+}
+
+.formTitle {
+  font-size: 14px !important;
+  padding: 5px;
+  margin: 0px 0px;
+}
+
+.marginBottom {
+  margin-bottom: 5px;
+}
+
+.paddingBottom {
+  padding-bottom: 5px !important;
+}
+
+.registration {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrationDiv {
+  /*padding-top: 10px;*/
+  display: inline-block;
+}
+
+.radioSex {
+  padding-top: 10px;
+}
+
+.red {
+  color: red;
+}
+
+/*text animation css*/
+
+.textErrorDiv {
+  position: relative;
+  width: 100%;
+  min-height: 20px;
+  overflow-x: hidden;
+}
+
+.textError {
+  font-size: 12px;
+  margin: 0 0 0 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  /*height: 10%;*/
+  position: absolute;
+  -webkit-animation-name: example;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  /*animation-duration: 4s;
+  animation-iteration-count: infinite;*/
+  -webkit-animation: mymove 10s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: mymove 10s infinite;
+}
+
+.textError {
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.textError {
+  animation-timing-function: ease-in-out;
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Standard syntax */
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/*......................................................
+  {Deshboard.Css Its used for all deshboard related css}
+  ......................................................*/
+
+.myNavbar1 {
+  position: fixed;
+  min-height: 50px;
+  /* margin-bottom: 20px !important; */
+}
+
+.myDeshboardContainerCss {
+  min-height: 570px !important;
+}
+
+.container-fluid {
+  padding: 0px!important;
+}
+
+.mainDiv {
+  background-color: #f1f1f1 !important;
+  padding: 10px !important;
+}
+
+.page-header {
+  font-size: 25px;
+  margin: 15px 0px;
+}
+
+.username {
+  font-size: 18px;
+}
+
+.myCard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+  display: block;
+}
+
+.nav-header {
+  padding: 33px 25px;
+  background-color: #2f4050;
+}
+
+.nav-header a {
+  color: #DFE4ED;
+}
+
+.nav-item a {
+  color: rgba(255, 255, 255, .5);
+}
+
+.nav-item a:hover {
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+
+.myTable {
+  border: 1px solid #ccc;
+  padding: 5px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-linkImage:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.listCom:hover {
+  cursor: pointer;
+}
+
+.greenTicks-DivCen {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.animated {
+  min-width: 100px !important;
+}
+
+.btnPara {
+  padding: 0px !important;
+}
+
+.greenTicks-DivCenD {
+  padding: 10px !important;
+}
+
+.anchLegend {
+  border-bottom: 1px solid #ccc;
+}
+
+.total-cssD {
+  text-align: center;
+  font-size: 20px;
+}
+
+.myTableCss {
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.myTableCss th {
+  text-align: center !important;
+}
+
+.borderErrorColor {
+  border-color: red;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/*###################################################################*/
+
+/* loader property*/
+
+/*###################################################################*/
+
+.bodyloading {
+  background: #000000 none repeat scroll 0 0;
+  height: 100%;
+  opacity: 0.5;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+.boxloading {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  z-index: 1051;
+}
+
+.boxloading:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite
+}
+
+.boxloading:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+/*modal css*/
+
+.modal-header {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+
+.modal-title {
+  font-size: 12px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  display: inline;
+  width: 100%;
+}
+
+.modal-body {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.resumeModal{
+  width: 135%; /* desired relative width */
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.width100 {
+  width: 100% !important;
+}
+
+/*select option for registration form*/
+
+.tableDataDiv {
+  width: 100%;
+  padding: 5px;
+}
+
+.dataTables_scroll {
+  overflow: auto;
+}
+
+/*About Me list css(dashboard page)*/
+
+.leftMargin0 {
+  margin-left: 0px !important;
+  left: 0px;
+}
+
+.padding5Top {
+  padding: 5px 15px;
+}
+
+/*###$$$-- Login Button-$$$####*/
+#login-btn{
+  position:fixed;
+  top:18%;
+  right: 8px;
+  padding:5px;
+  margin:0px;
+  /* width: 40px; */
+  /* height:80px; */
+  background:#FF931E;
+  z-index:15;
+  border-radius: 5px;
+  /* -moz-transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  -webkit-transform:rotate(-90deg); */
+  /* transform:rotate(7deg); */
+}
+
+#login-btn a {
+    color: #fff;
+}
+
+#login-btn:hover a {
+  display: inline-block;
+}
+
+#login-btn a:link {
+  color: #fff !important;
+}
+
+#login-btn a:visited {
+  color: #fff !important;
+}
+
+#login-btn:hover{
+  cursor: pointer;
+}
+
+
+/*###$$$-- Login Button-$$$####*/
+#contact-btn{
+  position:fixed;
+  bottom: 18%;
+  right: 8px;
+  padding:5px;
+  margin:0px;
+  /* width: 40px; */
+  /* height:80px; */
+  background:#FF931E;
+  z-index:15;
+  border-radius: 5px;
+  /* -moz-transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  -webkit-transform:rotate(-90deg); */
+  /* transform:rotate(7deg); */
+}
+
+#contact-btn a {
+    color: #fff;
+}
+
+#contact-btn:hover a {
+  display: inline-block;
+}
+
+#contact-btn a:link {
+  color: #fff !important;
+}
+
+#contact-btn a:visited {
+  color: #fff !important;
+}
+
+#contact-btn:hover{
+  cursor: pointer;
+}
+
+/*###$$$-- back-to-top -$$$####*/
+
+#back-top {
+  position: fixed;
+  bottom: 50%;
+  margin-left: 0;
+  right: 3px;
+  z-index: 500;
+  border: 1px solid #000;
+  width: auto;
+  padding: 10px;
+  background-color: darkolivegreen;
+  color: #fff;
+}
+
+#back-top a {
+  display: none;
+}
+
+#back-top:hover a {
+  display: inline-block;
+}
+
+#back-top a:link {
+  color: #fff !important;
+}
+
+#back-top a:visited {
+  color: #fff !important;
+}
+
+#back-top:hover{
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 5px 5px;
+  font-size: 14px;
+}
+
+.activeA {
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+
+/*####################################################
+########Forgot password/ reset password#############
+####################################################*/
+.login-box-body {
+  background: #fff;
+  padding: 20px;
+  border-top: 0;
+  color: #666;
+}
+
+.login-box {
+  width: 360px;
+  margin: 7% auto;
+}
+
+.login-logo a {
+  color: #444;
+}
+
+.login-logo {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+
+}
+
+.form-groupcss {
+  padding: 0px 0px;
+}
+
+.has-feedback {
+  position: relative !important;
+}
+
+
+.pulseWarning {
+    -webkit-animation: pulseWarning 0.75s infinite alternate;
+    animation: pulseWarning 0.75s infinite alternate;
+}
+@keyframes pulseWarning {
+	0% {
+		/* background-color: #fff; */
+		transform: scale(1);
+		opacity: 0.9;
+	}
+	30% {
+		/* background-color: #fff; */
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	100% {
+		background-color: #F8BB86;
+		transform: scale(2);
+		opacity: 0.3;
+	}
+}

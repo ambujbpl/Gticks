@@ -1,0 +1,1 @@
+  $('.tablecontainerDiv').removeClass('hide');

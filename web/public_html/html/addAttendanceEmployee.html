@@ -1,0 +1,178 @@
+<script type="text/javascript" src="./../js/addAttendanceEmployee.js"></script>
+<div class="row no-margin no-padding">
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 no-padding DivCen">
+    <label>City Name<i class="red"> *</i></label>
+    <select id="city" name="city" class="form-control" required>
+      <option>select Trade</option>
+      <option value="Bhopal">Bhopal</option>
+      <option value="Hoshangabad">Hoshangabad</option>
+    </select>
+  </div>
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 no-padding DivCen">
+    <label>Center Name<i class="red"> *</i></label>
+    <select id="center" name="center" class="form-control" required>
+      <option>select Trade</option>
+      <option value="Greenticks">Greenticks</option>
+      <option value="Knp">Knp</option>
+    </select>
+  </div>
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 no-padding registration DivCen" id="myFunctionSubmitDiv">
+    <button class="btn btn-primary" type="submit" value="Submit" onclick="myFunctionSubmit()">Fill Details & Submit</button>
+  </div>
+</div>
+<script>
+  var login = sessiongetItem("login");
+  function myFunctionSubmit() {
+    $(".tablecontainerDiv").html('');
+    $('.bodyloading').removeClass('hide');
+    var city = $('#city').val();
+    var center = $('#center').val();
+    var obj = {
+      "Role": login.Role,
+      "Name": login.Name,
+      "City": city,
+      "Center": center
+    };
+    console.log(obj);
+    if ((city != null)&&(center != null)) {
+      $.when(Posthandler("/route/getEmployee", obj, true)).done(function(res) {
+        if (res.resCode == 'OK') {
+          // getTableDiv();
+          console.log(res);
+          var arr = res.results;
+          if (login.Role != "Admin") {
+            console.log(">>>>>>>>", login.Role != "Admin", "  ", login.Role);
+            $.each(arr, function(i, arr) {
+              var body = "<tr>";
+              body += "<td>" + arr["name"] + "</td>";
+              body += "<td></td>";
+              body += "<td></td>";
+              body += "<td></td>";
+              body += "</tr>";
+              $("#totalStudentTable tbody").append(body);
+            });
+            // create_DatatableTOtalStudent('#totalStudentTable');
+            create_DatatableTOtalStudentTradeWiseValidationAndPrintPdf('#totalStudentTable');
+            // $('.dataTables_scrollHeadInner, .aboutMEeTable_header').css("width", "100%");
+            // $('.modal-content').removeClass('resumeModal');
+            // viewMoreFunctionForStudent(arr);
+
+          } else {
+            $('#tablecontainerDiv').html("<section class='content'><div class='boxC'><button class='btn btn-primary' type='submit' value='Submit' onclick='myFunctionSubmitDataTable()'>Fill Details & Submit</button><table id='aboutMEeTable' class='cell-border display aboutMEeTable_header'  cellspacing=0 width=100%><thead class='leaveTable_header'><tr><th>Name</th><th>Status</th><th>Chack In</th><th>Check Out</th></tr></thead><tbody class='aboutMeTable_body'></tbody></table></div></section>");
+            $.each(arr, function(i, arr) {
+              console.log(i,'   <<<<i');
+              var body = "<tr>";
+              body += "<td>" + arr["name"] + "</td>";
+              body += "<td><select  class='attendanceStatus' onChange='checkOption(this);'><option style='color:#FFA500'>pending</option><option style='color:green' value='Present'>Present</option><option style='color:red' value='Absent'>Absent</option></select></td>";
+              body += "<td>" + "<input id='time' type='time' class='checkIn' disabled>" + "</td>";
+              body += "<td>" + "<input id='time' type='time' class='checkOut' disabled>" + "</td>";
+              body += "</tr>";
+              $("#aboutMEeTable tbody").append(body);
+            });
+            create_DatatableAttandence('#aboutMEeTable');
+            // $('.bodyloading').addClass('hide');
+          }
+          $('.bodyloading').addClass('hide');
+          // $('.tablecontainerDiv').removeClass('hide');
+        } else {
+          console.log(res.results);
+          swal("Error!", res.message, "error");
+          $('.bodyloading').addClass('hide');
+          $('#containerDiv').removeClass('hide');
+        }
+      }).fail(function() {
+        swal("Error!", "sorry unable to check Trade list. please check your internet connection", "error");
+      });
+    } else {
+      swal("Error!", "Please Select Any Trade Name in Trade list!", "error");
+      $('.bodyloading').addClass('hide');
+      $('#containerDiv').removeClass('hide');
+    }
+  };
+
+  function getTableDiv() {
+    if (login.Role != "Admin") {
+      console.log("Not Admin");
+      // alert("login.Role != Company");
+      $('.tablecontainerDiv').html(
+        "<section class='content'><div class='boxC'><table id='totalStudentTable' class='cell-border display aboutMEeTable_header'  cellspacing=0 width=100%><thead class='leaveTable_header'><tr><th>Name</th><th>Status</th><th>Check In</th><th>Check Out</th></tr></thead><tbody class='aboutMeTable_body'></tbody></table></div></section>"
+      );
+    } else {
+      // alert("login.Role == Company");
+      console.log("Admin");
+      $('.tablecontainerDiv').html(
+        "<section class='content'><div class='boxC'><table id='totalStudentTable' class='cell-border display aboutMEeTable_header'  cellspacing=0 width=100%><thead class='leaveTable_header'><tr><th>Name</th><th>Status</th><th>Check In</th><th>Check Out</th></tr></thead><tbody class='aboutMeTable_body'></tbody></table></div></section>"
+      );
+    }
+  };
+
+  function create_DatatableTOtalStudentTradeWiseValidationAndPrintPdf(name) {
+    return $(name).DataTable({
+      dom: 'Bfrtip',
+      buttons: [{
+          extend: 'print',
+          text: 'Print all',
+          exportOptions: {
+            columns: [0,1, 2, 3, 4, 5, 6]
+          }
+        },
+        {
+          extend: 'print',
+          text: 'Print selected',
+          exportOptions: {
+            columns: ':visible:not(.not-exported)',
+            columns: [0,1, 2, 3, 4, 5, 6],
+            modifier: {
+              selected: true
+            }
+          }
+        },
+        {
+          extend: 'pdf',
+          text: 'Save As PDF',
+          title: 'All_Selected_Student_PDF_List.',
+          exportOptions: {
+            columns: ':visible:not(.not-exported)',
+            columns: [0,1, 2, 3, 4, 5, 6],
+            modifier: {
+              selected: true
+            }
+          }
+        }
+      ],
+      select: {
+        style: 'multi'
+      },
+      "scrollX": true,
+      scrollCollapse: true,
+      "autoWidth": true
+    });
+    // $('.dt-button').addClass('btn btn-primary');
+  };
+  function checkOption(obj) {
+    // var input = document.getElementById("inputTextBox");
+    var row = $(obj).closest('tr');
+    if(obj.value=='Present'){
+console.log("row>>>>>",row);
+        // alert("test",row);
+      // tr td:nth-child(1), tr td:nth-child(3)
+$(row).find('.checkIn,.checkOut').prop("disabled",false);
+        // input.disabled=true;
+    }else{
+       $(row).find('.checkIn,.checkOut').prop("disabled",true);
+        // input.disabled=false;
+    }
+}
+function myFunctionSubmitDataTable(){
+  var table = $('#aboutMEeTable').DataTable();
+
+var data = table
+    .rows()
+    .data();
+
+var data1 = table.$('input, select').serialize();
+alert( 'The table has '+data.length+' records' );
+console.log("Data",data);
+console.log("Data1",data1);
+}
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./img/GreenTicksLogo.png">
+  <title>GreenTicks</title>
+  <!-- Bootstrap -->
+  <link href="static/css/sweetalert.css" rel="stylesheet">
+  <link href="static/css/sweetalert-animation.css" rel="stylesheet">
+  <!-- main style -->
+  <link href="css/sass/index.css" rel="stylesheet">
+  <link href="css/sass/custom_Media.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="orange" class="orange"></div>
+  <!-- jQuery -->
+  <script type="text/javascript">
+    function GetIEVersion() {
+      var sAgent = window.navigator.userAgent;
+      var Idx = sAgent.indexOf("MSIE");
+      // If IE, return version number.
+      if (Idx > 0)
+        return parseInt(sAgent.substring(Idx + 5, sAgent.indexOf(".", Idx)));
+
+      // Condition Check IF IE 11 and or MS Edge
+      else if (!!navigator.userAgent.match(/Trident\/7\./) ||
+        window.navigator.userAgent.indexOf("Edge") > -1) {
+        return 11;
+      } else {
+        return 0; //It is not IE
+      }
+    }
+    if (GetIEVersion() > 0) {
+      window.location.href = "html/browserError.html";
+    }
+  </script>
+  <!--  plugins  -->
+  <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="static/js/sweetalert.min.js"></script>
+  <script type="text/javascript" src="static/js/particles.js"></script>
+  <script type="text/javascript" src="js/particles_config.js"></script>
+  <!--  main script  -->
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

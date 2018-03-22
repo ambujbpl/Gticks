@@ -1,0 +1,60 @@
+ /*datatable header color*/
+ /*thead th, table.dataTable thead td */
+
+ table.dataTable thead th{
+   border-top: 1px solid #ccc !important;
+   border-left: 1px solid #ccc !important;
+   background: #117191;
+   color: #ffffff;
+}
+   /*border-right: 1px solid #ccc !important;*/
+ }
+ table.dataTable thead th:last-child{
+   border-right: 1px solid #ccc !important;
+}
+ table.dataTable thead th {
+     /*background-color: #f7f7f7;*/
+ }
+
+.aboutMEeTable_header, .aboutMeTable_body {
+  text-align: center;
+  width: auto;
+}
+
+/*.dataTables_wrapper{overflow-x: scroll !important;}*/
+
+.aboutMEeTable_header thead th {
+  font-size: 12px;
+  text-align: center;
+}
+
+.aboutMEeTable_header tbody td {
+  font-size: 12px;
+  text-align: center;
+}
+
+.editrow {
+  cursor: pointer;
+}
+
+.editrow:hover {
+  text-decoration: underline;
+}
+
+#viewMoreTable tr th {
+  font-size: 10px;
+  text-align: center;
+}
+
+#viewMoreTable tr td {
+  font-size: 10px;
+  text-align: center;
+}
+
+#viewMoreTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#viewMoreTable tr:hover {
+  background-color: #f2e2e2;
+}

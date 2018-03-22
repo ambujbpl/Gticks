@@ -1,0 +1,18 @@
+/*Simple reset*/
+* {margin: 0; padding: 0;}
+
+body {
+	/*You can use any kind of background here.*/
+	background: #102a54;
+}
+canvas {
+	display: block;
+}
+.orange{
+	height: 100%;
+	width: 100%;
+}
+.hide{
+	display: none;
+  	visibility: hidden;
+}

@@ -1,0 +1,133 @@
+/*==================================================
+=            Bootstrap 4 Media Queries             =
+==================================================*/
+
+/*----------- common device -----------*/
+
+@media (max-width: 768px) {
+  .greenTicks-fdoc {
+    font-size: 9px !important;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 4px;
+    font-size: 10px;
+    line-height: 1;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  }
+ .social {
+    display: inline-block;
+    float: none;
+    border: 1px solid dimgray;
+  }
+  .socialDiv {
+    padding: 5px 0px;
+  }
+  .social li {
+    height: 20px;
+  }
+  .resumeModal{
+    width: 100%; /* desired relative width */
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .containerload {
+    min-height: 250px;
+  }
+  .btn-primary {
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+  .img, .img1, .img2{
+    top:3px;
+    right:7px;
+  }
+  .login-box {
+    width: 90%;
+    margin-top: 60px;
+  }
+  .login-logo {
+    font-size: 20px;
+  }
+  .greenTicks-title{
+    font-size: 15px;
+  }
+  .total-css{
+    font-size: 20px;
+  }
+  .greenTicks-stitle{
+    font-size: 10px !important;
+  }
+  .carouselImage{
+    height: 380px;
+    width: 100%;
+  }
+  .img-rounded{
+    height: 35px;
+    width: 35px;
+  }
+  .col-xs-4{
+    width: auto;
+  }
+  .page-header{
+    font-size: 15px !important;
+  }
+  .contactUsPara{
+    font-size: 10px !important;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 16px !important;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 16px !important;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 320px) and (min-width: 0px) {
+  .greenTicks-stitle{
+    /*font-size: 10px;*/
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 15px !important;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 321px) and (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  .col-xs-4{
+      width: 120px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .col-xs-4{
+    width: 136px;
+  }
+}
