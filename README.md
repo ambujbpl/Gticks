@@ -70,7 +70,7 @@ You can use heroku, simply make a account on it and select nodejs app hosting an
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/ambujbpl/Gticks/CONTRIBUTING.md) for details on our CONTRIBUTING Policy, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/ambujbpl/Gticks/blob/master/CONTRIBUTING.md) for details on our CONTRIBUTING Policy, and the process for submitting pull requests to us.
 
 ## app version
 
