@@ -76,13 +76,14 @@ Please read [CONTRIBUTING.md](https://gist.github.com/ambujbpl/Gticks) for detai
 
 v1.0
 
-## What feture in Next release 
-
-**two way communication using socket.js and more....**
-
 ## First Release Date
 
 **22 Mar 2018**
+
+
+## What new Feature will be in next Release?
+
+**_Two way communication using socket.js and more...._**
 
 ## Author and Developer
 
