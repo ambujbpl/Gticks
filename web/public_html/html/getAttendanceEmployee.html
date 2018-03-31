@@ -1,0 +1,102 @@
+<script type="text/javascript" src="./../js/addAttendanceEmployee.js"></script>
+<style type="text/css" >
+  .DivCen{
+    text-align: center;
+    padding: 5px 10px;
+  }
+  .infoTable{
+    margin: 5px;
+    padding: 10px;
+  }
+  .attendanceTable thead {
+    border-left: 1px solid #ccc !important;
+    background: #117191;
+  }
+  .attendanceTable tbody {
+    border-left: 1px solid #ccc !important;
+  }
+  .attendanceTable thead th{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .attendanceTable tbody td{
+    text-align: center;
+  }
+  .attendanceTable tbody tr:hover{
+    background-color: #ccc;
+  }
+</style>
+<div class="row no-margin no-padding">
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 no-padding DivCen">
+    <label>Select Date to view Attendance<i class="red"> *</i></label>
+    <input class="form-control form-controlMy" id="date" name="date" placeholder="DD-MM-YYYY" type="text" />
+  </div>
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 no-padding registration DivCen" id="myFunctionSubmitDiv">
+    <button class="btn btn-primary" type="submit" value="Submit" onclick="viewAttandance()">Fill Details & Submit</button>
+  </div>
+</div>
+
+<div id='my_file_output_Div' class='hide'>
+<table style="width:100%" class="table-striped table-bordered attendanceTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Check-In</th>
+      <th>Check-Out</th>
+      <th>Total-Duration</th>
+    </tr>
+  </thead>
+  <tbody  id="my_file_output"></tbody>
+</table>
+</div>
+
+<script>
+
+  function viewAttandance() {
+      var date = $('#date').val();
+      if (date) {
+        console.log(date);
+        var fd = {"Date" : date};
+        console.log("fd>>>>>>>", fd);
+          $.when(PosthandlerWOH("/route/getAttendance", fd, true)).done(function(res) {
+            if (res.resCode == 'Ok') {
+              var oJS = res.msg;
+              console.log("oJS????????????",oJS);
+       $.each(oJS, function(i, arr) {
+        var body = "<tr>";
+        body += "<td>" + arr.name + "</td>";
+        if(arr.status === "Present"){
+        body += "<td style='color: green;'>" + arr.status + "</td>";
+        body += "<td style='color: green;'>" + arr.checkin + "</td>";
+        body += "<td style='color: green;'>" + arr.checkout + "</td>";
+        body += "<td style='color: green;'>" + arr.totalduration + "</td>";
+        }else if(arr.status === "Leave"){
+        body += "<td style='color: orange;'>" + arr.status + "</td>";
+        body += "<td style='color: orange;'>" + arr.checkin + "</td>";
+        body += "<td style='color: orange;'>" + arr.checkout + "</td>";
+        body += "<td style='color: orange;'>" + arr.totalduration + "</td>";
+        }else{
+        body += "<td style='color: red;'>" + arr.status + "</td>";
+        body += "<td style='color: red;'>" + arr.checkin + "</td>";
+        body += "<td style='color: red;'>" + arr.checkout + "</td>";
+        body += "<td style='color: red;'>" + arr.totalduration + "</td>";
+        }
+        body += "</tr>";
+        console.log("body>>>",body);
+         $("#my_file_output").append(body);
+      });
+      $('#my_file_output_Div').removeClass('hide');
+            }
+          });
+      } else {
+        swal({
+          title: "Cancelled",
+          text: "Please enter The Attendance Date!",
+          type: "error"
+        });
+      }
+  };
+</script>
